@@ -10,7 +10,8 @@ common LaTeX idioms by a simple space `0x20`.
 This filter provides a workaround for [jgm/pandoc#1938][1938].
 
 Note: [`pandocfilters`][pf] is embedded here as a git submodule to make it
-easier to embed *this* project as a submodule elsewhere.
+easier to embed *this* project as a submodule elsewhere
+(e.g., [my markdown ⇒ html renderer][mdh]).
 
 ## Example
 
@@ -54,5 +55,6 @@ equations automatically.
 [tilde]: https://tex.stackexchange.com/a/41268
 [pf]: https://github.com/jgm/pandocfilters
 [1938]: https://github.com/jgm/pandoc/issues/1938
+[mdh]: https://github.com/yangle/mdh
 [autonumber]: http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering
 [???]: https://github.com/jgm/pandoc/issues/1938#issuecomment-74011358
