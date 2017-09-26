@@ -36,7 +36,7 @@ Converting it to html with the command
 pandoc --standalone --from markdown --to html --mathjax \
     -H autonumber.html --filter ./pandoc-eqref example.md > example.html
 ```
-proper renders `Eq.~\eqref{eq:boson}` into `Eq. (2)`:
+properly renders `Eq.~\eqref{eq:boson}` into `Eq. (2)`:
 
 <p align="center">
   <img src="example.png"/>
