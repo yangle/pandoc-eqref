@@ -2,22 +2,9 @@
 
 from pandocfilters import toJSONFilter, Math, Str, Space
 
-
-idioms = set(['Eq.~', 'Eqs.~', 'Equation~', 'Equations~',
-              'Fig.~', 'Figs.~', 'Figure~', 'Figures~',
-              'Ref.~', 'Refs.~', 'Reference~', 'References~',
-              'Table~', 'Tables~',
-              'and~'])
-
-
+# wrap \ref and \eqref in Math()
 def eqref(key, value, fmt, meta):
-    # replace idiomatic tilde with space
-    if key == 'Str':
-        if value in idioms:
-            return [Str(value[:-1]), Space()]
-
-    # wrap \ref and \eqref in Math()
-    elif key == 'RawInline' and value[0] == 'tex':
+    if key == 'RawInline' and value[0] == 'tex':
         if value[1].startswith(r'\ref') or value[1].startswith(r'\eqref'):
             return Math(dict(t='InlineMath'), value[1])
 

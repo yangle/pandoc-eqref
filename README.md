@@ -4,9 +4,6 @@
 and `\ref{...}` calls in `$...$`, so that they can be recognized and properly
 rendered by [MathJax][].
 
-Additionally, it also replaces the [non-breaking space][tilde] `~` in a few
-common LaTeX idioms by a simple space `0x20`.
-
 This filter provides a workaround for [jgm/pandoc#1938][1938].
 
 Note: [`pandocfilters`][pf] is embedded here as a git submodule to make it
@@ -29,7 +26,7 @@ For the boson part, the mode expansion of the chiral field $\phi$ on the cylinde
 +i\sum_{n\neq 0}\frac{1}{n}\,\hat{a}_ne^{-n\gamma z}.
 \end{equation}
 
-In Eq.~\eqref{eq:boson}, the $\hat{a}_n$ modes of the U(1) current satisfy the Heisenberg algebra, while $\hat{\phi}_0$ is the canonical conjugate to the zero mode $\hat{a}_0$.
+In Eq. \eqref{eq:boson}, the $\hat{a}_n$ modes of the U(1) current satisfy the Heisenberg algebra, while $\hat{\phi}_0$ is the canonical conjugate to the zero mode $\hat{a}_0$.
 ```
 
 Converting it to html with the command
